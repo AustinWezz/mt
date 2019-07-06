@@ -24,8 +24,8 @@ module.exports = {
   */
   css: [
     'element-ui/lib/theme-chalk/reset.css',
-    'element-ui/lib/theme-chalk/index.css'
-    // '~assets/css/main.css'
+    'element-ui/lib/theme-chalk/index.css',
+    '@/assets/css/main.css'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -37,7 +37,14 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/axios'
   ],
+  /*
+  ** Axios module configuration
+  */
+  axios: {
+  // See https://github.com/nuxt-community/axios-module#options
+  },
   /*
   ** Build configuration
   */
@@ -57,6 +64,6 @@ module.exports = {
         })
       }
     },
-    cache: true // 缓存
+    cache: false // 缓存
   }
 }
